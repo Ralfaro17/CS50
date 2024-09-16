@@ -1,50 +1,44 @@
-// Selection sort in C
-
+// Ordenamiento de seleccion en C
 #include <stdio.h>
 
-// function to swap the the position of two elements
-void swap(int *a, int *b)
+void ordenamiento_de_seleccion(int arreglo[], int size)
 {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
-void selectionSort(int array[], int size)
-{
-    for (int step = 0; step < size - 1; step++)
+    for (int paso = 0; paso < size - 1; paso++)
     {
-        int min_idx = step;
-        for (int i = step + 1; i < size; i++)
+        int indice_del_menor = paso;
+        for (int i = paso + 1; i < size; i++)
         {
 
-            // To sort in descending order, change > to < in this line.
-            // Select the minimum element in each loop.
-            if (array[i] < array[min_idx])
-                min_idx = i;
+            // Para ordenar en orden descendente, cambie > a < en esta línea.
+            // Selecciona el elemento menor en cada bucle.
+            if (arreglo[i] < arreglo[indice_del_menor])
+                indice_del_menor = i;
         }
 
-        // put min at the correct position
-        swap(&array[min_idx], &array[step]);
+        // coloca min en la posición correcta
+        // se intercambia el indice del menor, con el paso actual
+        int temp = arreglo[indice_del_menor];
+        arreglo[indice_del_menor] = arreglo[paso];
+        arreglo[paso] = temp;
     }
 }
 
-// function to print an array
-void printArray(int array[], int size)
+// funcion para imprimir un arreglo
+void imprimir_arreglo(int arreglo[], int longitud)
 {
-    for (int i = 0; i < size; ++i)
+    for (int i = 0; i < longitud; ++i)
     {
-        printf("%d  ", array[i]);
+        printf("%d  ", arreglo[i]);
     }
     printf("\n");
 }
 
-// driver code
+// funcion principal
 int main()
 {
-    int data[] = {20, 12, 10, 15, 2};
-    int size = sizeof(data) / sizeof(data[0]);
-    selectionSort(data, size);
-    printf("Sorted array in Acsending Order:\n");
-    printArray(data, size);
+    int datos[] = {20, 12, 10, 15, 2};
+    int longitud = sizeof(datos) / sizeof(datos[0]);
+    ordenamiento_de_seleccion(datos, longitud);
+    printf("Arreglo ordenado de forma ascendente:\n");
+    imprimir_arreglo(datos, longitud);
 }
