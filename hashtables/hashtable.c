@@ -15,7 +15,7 @@ typedef struct nodo
 const int CANTIDAD_DE_ESPACIOS = 26;
 nodo *hashtable[CANTIDAD_DE_ESPACIOS];
 
-    // prototipo de la función hash
+// prototipo de la función hash
 int hash(string palabra);
 void insertar(string palabra);
 bool buscar(string palabra);
@@ -41,7 +41,7 @@ int main()
     liberar();
 }
 
-//Definir las funciones
+// Definir las funciones
 int hash(string palabra)
 {
     // usamos el ASCII de las letras mayúsculas para determinar su posición en el arreglo
@@ -64,7 +64,7 @@ void insertar(string palabra)
     // obtenemos la posición que debería tener la palabra
     int pos = hash(palabra);
     // hacemos una inserción por cabeza
-    new->next = hashtable[pos];
+    new->next = hashtable[pos]; // va a apuntar a null la primer vez
     hashtable[pos] = new;
 }
 

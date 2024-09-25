@@ -24,8 +24,10 @@ int main()
     frutas *temp = malloc(sizeof(frutas));
     temp->nombre = "mango";
     temp->precio = 15;
-    temp->sig = compras;
 
+    // Por cabeza = cada nodo nuevo se inserta al inicio -> 
+    // Por cola = cada nodo nuevo se inserta al final -> 
+    temp->sig = compras;
     compras = temp;
 
 
