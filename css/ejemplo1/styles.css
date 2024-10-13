@@ -1,0 +1,52 @@
+/* h1 {
+    color: red;
+}
+
+.waos{
+    font-size: larger;
+}
+
+.hola{
+    color: blue;
+}
+
+#button-waos{
+    color: green;
+}
+
+h1:nth-child(3){
+    background-color: yellow;
+}
+
+body > h1:nth-child(2):hover{
+    color: green;
+}
+
+body > p{
+    color: rebeccapurple;
+    background-color: tomato;
+}
+
+h1 + p{
+    color: chocolate;
+} */
+
+.waos{
+    color:rebeccapurple;
+}
+
+button{
+    color: red !important;
+}
+
+#button-waos{
+    color: green;
+}
+
+input[type="password"][name="valor"]{
+    background-color: chartreuse;
+}
+
+input::placeholder{
+    color: red;
+}

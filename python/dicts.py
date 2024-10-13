@@ -13,4 +13,6 @@ print(diccionario.get("estatura"))
 
 print(diccionario.fromkeys(["nombre", "edad", "peso"], "valor por defecto"))
 
+# hola mundo 
 
+""" waos """

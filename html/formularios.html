@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    hypertext transfer protocol
+    <form action="/google.com" id="formulario-tuani" method="POST">
+        <input list="lista-de-datos" type="text" maxlength="10" minlength="2" value="Valor inicial" pattern="">
+        <input type="number" step="2" title="solo acepto numero">
+        <input type="password">
+        <input type="date">
+        <select name="" id="">
+            <option value="1">David</option>
+            <option value="2">Omar</option>
+            <option value="3">Carlos</option>
+        </select>
+        <input type="button">
+        <input type="email">
+        <input type="file" accept="*.png">
+        <input type="color">
+        <input type="datetime-local">
+        <input type="image">
+        <input type="tel">
+
+        <textarea name="" id=""></textarea>
+        <div>
+            <label for="">opcion 1</label>
+            <input type="radio">
+            <label for="">opcion 2</label>
+            <input type="radio">
+
+        </div>
+
+    </form>
+
+    <datalist id="lista-de-datos">
+        <option value="Edge">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+
+    <button type="submit" form="formulario-tuani">mandar formulario</button>
+</body>
+</html>
